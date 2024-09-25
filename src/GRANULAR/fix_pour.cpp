@@ -227,7 +227,6 @@ FixPour::FixPour(LAMMPS *lmp, int narg, char **arg) :
   if (domain->dimension == 3) {
     if (region_style == 1) {
       double dy = yhi - ylo;
-      if (dy < 1.0) dy = 1.0;
       volume = (xhi - xlo) * dy * (zhi - zlo);
     } else
       volume = MY_PI * rc * rc * (zhi - zlo);
